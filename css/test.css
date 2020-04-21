@@ -1,4 +1,4 @@
-body , button , input {
+#main , button , input {
     direction: rtl;
     font-size: 20px;
     font-family: Tahoma;
@@ -49,4 +49,19 @@ input {
 
 #reset {
     margin-top: 20px;
+}
+
+#foot{
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
 }
