@@ -56,7 +56,7 @@ function guess() {
         remainingChances--;
 
         if (remainingChances > 0) {
-            chancesSpan.textContent = remainingChances;
+            chancesSpan.textContent = ` ${remainingChances} `;
         }else {
             stage2.innerHTML = `<p class="red">متاسفانه فرصت شما به پایان رسید!</p>`;
         }
