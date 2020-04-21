@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="css/test.css" />
+</head>
+<body>
+    <div id="main">
+        <h2>عدد را حدس بزن</h2>
+
+        <div id="stage1">
+            <p>یک عدد بین 10 تا 1000 را به عنوان حد بالا وارد کنید</p>
+            <input type="text" id="maximum" />
+            <button type="button" id="start">شروع کن</button>
+        </div>
+
+
+        <div id="stage2" class="hidden">
+            <p>شما<span id="chances"> 0 </span>بار فرصت حدس زدن دارید.</p>
+            <p id="L1" class="green"></p>
+            <input type="text" id="guess-number" />
+            <button id="guess-button">حدس بزن</button>
+            <p id="status">حدس های شما : </p>
+            <p id="guid"></p>
+        </div>
+        <button id="reset">شروع دوباره</button>
+    </div>
+
+    <script src="js/test.js"></script>
+</body>
+</html>

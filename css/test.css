@@ -1,0 +1,52 @@
+body , button , input {
+    direction: rtl;
+    font-size: 20px;
+    font-family: Tahoma;
+    padding: 5px;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px dashed orangered;
+    padding-bottom: 15px;
+}
+
+input {
+    width: 80px;
+    border: 1px solid crimson;
+}
+
+#chances{
+    font-weight: bold;
+    color: red;
+}
+
+.blue {
+    color: blue;
+    background-color: rgba(204, 206, 244, 0.59);
+}
+
+.red {
+    color: red;
+    background-color: rgba(255, 196, 208, 0.41);
+}
+
+.green {
+    color: springgreen;
+}
+
+.orange {
+    color: orange;
+}
+
+.magenta {
+    color: darkmagenta;
+}
+
+.hidden {
+    display: none;
+}
+
+#reset {
+    margin-top: 20px;
+}
