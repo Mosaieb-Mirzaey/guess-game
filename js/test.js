@@ -14,10 +14,23 @@ let l1 = document.getElementById('L1');
 
 let maximumNumber, totalChances, targetNumber;
 
+
+        String.prototype.toEnglishDigit = function() {
+            let find = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+            let replace = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            let replaceString = this;
+            let regex; for (let i = 0; i < find.length; i++) { regex = new RegExp(find[i], "g");
+            replaceString = replaceString.replace(regex, replace[i]); } return replaceString; };
+
+
+
+
+
+
 startButton.addEventListener('click', startGame);
 
 function startGame() {
-    maximumNumber = Number(maximumInput.value);     // حداکثر عدد ورودی برای شروع بازی که در قسمت اینپوت وارد میکنیم
+    maximumNumber = Number(maximumInput.value.toEnglishDigit());     // حداکثر عدد ورودی برای شروع بازی که در قسمت اینپوت وارد میکنیم
     if (maximumNumber > 10) {
         targetNumber = Math.floor(Math.random() * (maximumNumber + 1));
         totalChances = Math.floor(Math.log2(maximumNumber)) + 1;    // یک الگوریتم منطقی برای حداقل تعداد شانس در این بازی
@@ -34,9 +47,9 @@ function startGame() {
 guessButton.addEventListener('click', guess);
 
 function guess() {
-    let yourGuess = Number(guessInput.value);
+    let yourGuess = Number(guessInput.value.toEnglishDigit());
 
-    let x = /^[1-9]?[0-9]{2}$|^1000$/;
+    let x = /^[1-9]?[0-9]{1,2}$|^1000$/;
     if (x.test(`${yourGuess}`) && yourGuess <= maximumNumber) {
 
         if (yourGuess == targetNumber) {
